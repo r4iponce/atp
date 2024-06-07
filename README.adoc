@@ -1,0 +1,31 @@
+= A go lib for parse human readable time duration
+
+This library parse `1d1h1m1s` format like gostd `time.Duration()`.
+
+== Why write a library instead of use `time.Duration()` ?
+Because standard library do not support day unit.
+
+== Know limitation
+- Unit has to be in specific order (biggest to lowest : d->h->m->s).
+- No support for unit smaller than second.
+
+== Example :
+
+[,go]
+----
+package main
+
+import (
+    "gitlab.gnous.eu/ada/duration"
+    "fmt"
+)
+
+func main() {
+    t, err := duration.ParseDuration("1d2h")
+    if err != nil {
+        panic(err)
+    }
+
+    fmt.Println(t)
+}
+----
