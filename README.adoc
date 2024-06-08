@@ -16,12 +16,12 @@ Because standard library do not support day unit.
 package main
 
 import (
-    "gitlab.gnous.eu/ada/duration"
+    "gitlab.gnous.eu/ada/atp"
     "fmt"
 )
 
 func main() {
-    t, err := duration.ParseDuration("1d2h")
+    t, err := atp.ParseDuration("1d2h")
     if err != nil {
         panic(err)
     }
