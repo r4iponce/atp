@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func TestUtils(t *testing.T) {
+func TestAtp(t *testing.T) {
 	t.Parallel()
 
 	testCheckCharNotRedundantTrue(t)

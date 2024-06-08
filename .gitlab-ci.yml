@@ -7,4 +7,4 @@ test:
   image: golang:1.22
   stage: test
   script:
-    - go test $(go list ./...)
+    - go test -v .
